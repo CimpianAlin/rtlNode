@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This file is protected by Copyright. Please refer to the COPYRIGHT file
+ distributed with this source distribution.
+
+ This file is part of REDHAWK.
+
+ REDHAWK is free software: you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+
+ REDHAWK is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+ for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+-->
+<!DOCTYPE deviceconfiguration PUBLIC "-//JTRS//DTD SCA V2.2.2 DCD//EN" "deviceconfiguration.dtd">
+<deviceconfiguration name="rtlNode" id="DCE:651d26c8-c850-4939-a146-b14a0f433cb9">
+    <devicemanagersoftpkg>
+    	<localfile name="/mgr/DeviceManager.spd.xml"/>
+    </devicemanagersoftpkg>  
+    <componentfiles>
+    	<componentfile type="SPD" id="GPP_848d6de0-4d80-11e4-8518-afbc0b1e632c">
+    		<localfile name="/nodes/DevMgr_arm/GPP/GPP.spd.xml"/>
+    	</componentfile>
+    	<componentfile type="SPD" id="RTL_e5b78dda-4d80-11e4-b1ea-93f853daa13d">
+    		<localfile name="/devices/RTL2832U/RTL2832U.spd.xml"/>
+    	</componentfile>
+    </componentfiles>  
+    <partitioning>
+    	<componentplacement>
+    		<componentfileref refid="GPP_848d6de0-4d80-11e4-8518-afbc0b1e632c"/>
+    		<componentinstantiation id="DCE:26e660e2-4d81-11e4-a73b-c3610a0c04b2">
+    			<usagename>GPP_BBB_1</usagename>
+    		</componentinstantiation>
+    	</componentplacement>
+    	<componentplacement>
+    		<componentfileref refid="RTL_e5b78dda-4d80-11e4-b1ea-93f853daa13d"/>
+    		<componentinstantiation id="DCE:521c0b22-4d81-11e4-9e1b-474c896b415f">
+    			<usagename>RTL_BBB_1</usagename>
+    		</componentinstantiation>
+    	</componentplacement>
+    </partitioning>
+    <domainmanager>
+    	<namingservice name="REDHAWK_DEV/REDHAWK_DEV"/>
+    </domainmanager>
+</deviceconfiguration>
