@@ -3,7 +3,7 @@
  This file is protected by Copyright. Please refer to the COPYRIGHT file
  distributed with this source distribution.
 
- This file is part of REDHAWK.
+ This file is part of REDHAWK rtlNode.
 
  REDHAWK is free software: you can redistribute it and/or modify it
  under the terms of the GNU Lesser General Public License as published by the
@@ -22,7 +22,7 @@
 <deviceconfiguration name="rtlNode" id="DCE:651d26c8-c850-4939-a146-b14a0f433cb9">
     <devicemanagersoftpkg>
     	<localfile name="/mgr/DeviceManager.spd.xml"/>
-    </devicemanagersoftpkg>  
+    </devicemanagersoftpkg>
     <componentfiles>
     	<componentfile type="SPD" id="GPP_848d6de0-4d80-11e4-8518-afbc0b1e632c">
     		<localfile name="/nodes/DevMgr_arm/GPP/GPP.spd.xml"/>
@@ -30,7 +30,7 @@
     	<componentfile type="SPD" id="RTL_e5b78dda-4d80-11e4-b1ea-93f853daa13d">
     		<localfile name="/devices/RTL2832U/RTL2832U.spd.xml"/>
     	</componentfile>
-    </componentfiles>  
+    </componentfiles>
     <partitioning>
     	<componentplacement>
     		<componentfileref refid="GPP_848d6de0-4d80-11e4-8518-afbc0b1e632c"/>

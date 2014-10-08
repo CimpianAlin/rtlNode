@@ -2,7 +2,7 @@
 # This file is protected by Copyright. Please refer to the COPYRIGHT file
 # distributed with this source distribution.
 #
-# This file is part of REDHAWK BPSK.
+# This file is part of REDHAWK rtlNode.
 #
 # REDHAWK is free software: you can redistribute it and/or modify it
 # under the terms of the GNU Lesser General Public License as published by the
@@ -27,21 +27,21 @@
 %define _prefix %{_sdrroot}
 Prefix: %{_prefix}
 
-Name: rtlNode
-Summary: Node rtlNode
-Version: 1.0.0
-Release: 1
-License: None
-Group: REDHAWK/Nodes
-Source: %{name}-%{version}.tar.gz
-# Require the device manager whose SPD is referenced
-Requires: 
-# Require each referenced device/service
-Requires:
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}
+Name:           rtlNode
+Summary:        Node rtlNode
+Version:        1.0.0
+Release:        1%{?dist}
+License:        LGPLv3+
+Group:          REDHAWK/Nodes
+Source:         %{name}-%{version}.tar.gz
+BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
+Node %{name}
+ * Commit: __REVISION__
+ * Source Date/Time: __DATETIME__
+
 
 %prep
 %setup
